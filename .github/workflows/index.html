@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check-in Diário de Saúde</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Check-in Diário de Saúde</h1>
+    <p>Nos conte como você está se sentindo hoje</p>
+
+    <form id="checkin-form">
+      <!-- NOVAS PERGUNTAS HUMANIZADAS -->
+      <label for="familia">👨‍👩‍👧‍👦 Como está sua relação com a família hoje?</label>
+      <select id="familia" name="familia">
+        <option value="boa">Boa</option>
+        <option value="regular">Regular</option>
+        <option value="difícil">Difícil</option>
+        <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+      </select>
+
+      <label for="genero">⚧️ Como você se identifica em termos de gênero?</label>
+      <select id="genero" name="genero">
+        <option value="cisgenero">Cisgênero</option>
+        <option value="transgenero">Transgênero</option>
+        <option value="nao_binario">Não binário</option>
+        <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="inclusao_social">🌈 Você se sentiu incluído(a) socialmente hoje?</label>
+      <select id="inclusao_social" name="inclusao_social">
+        <option value="sim">Sim</option>
+        <option value="parcialmente">Parcialmente</option>
+        <option value="nao">Não</option>
+        <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+      </select>
+
+      <!-- PERGUNTAS EXISTENTES -->
+      <label for="humor">🧠 Humor:</label>
+      <input type="text" id="humor" name="humor" placeholder="Ex: animado, triste, calmo...">
+
+      <label for="estresse">😣 Nível de Estresse (1 a 10):</label>
+      <input type="number" id="estresse" name="estresse" min="1" max="10">
+
+      <label for="sono">😴 Horas de Sono:</label>
+      <input type="number" id="sono" name="sono" min="0" step="0.5">
+
+      <label for="dor">🤕 Está com dor física?</label>
+      <input type="checkbox" id="dor" name="dor">
+
+      <label for="alimentacao">🍽️ Alimentação:</label>
+      <select id="alimentacao" name="alimentacao">
+        <option value="boa">Boa</option>
+        <option value="regular">Regular</option>
+        <option value="ruim">Ruim</option>
+      </select>
+
+      <label for="atividade">🏃‍♂️ Fez atividade física?</label>
+      <select id="atividade" name="atividade">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="rede_apoio">🤝 Sentiu apoio de alguém hoje?</label>
+      <select id="rede_apoio" name="rede_apoio">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+        <option value="parcial">Parcial</option>
+      </select>
+
+      <label for="energia">⚡ Energia (1 a 10):</label>
+      <input type="number" id="energia" name="energia" min="1" max="10">
+
+      <label for="motivacao">🎯 Motivação (1 a 10):</label>
+      <input type="number" id="motivacao" name="motivacao" min="1" max="10">
+
+      <label for="produtividade">💼 Sentiu-se produtivo(a)?</label>
+      <select id="produtividade" name="produtividade">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+        <option value="mais_ou_menos">Mais ou menos</option>
+      </select>
+
+      <label for="observacoes">📝 Observações:</label>
+      <textarea id="observacoes" name="observacoes" placeholder="Deseja comentar algo mais?"></textarea>
+
+      <button type="submit">✅ Enviar Check-in</button>
+      <p id="confirmation" class="hidden"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
